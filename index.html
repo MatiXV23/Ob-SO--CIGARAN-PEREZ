@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SISTEMAS OPERATIVOS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-blue-50" style="font-family: 'Inter', sans-serif;">
+
+    <div class="container mx-auto px-4 py-4">
+
+        <header class="text-center mb-8">
+            <h1 class="text-4xl md:text-5xl font-bold text-blue-900">SERVIDOR DE ARCHIVOS</h1>
+            <p class="text-lg text-blue-700 mt-2">Obligatorio final de sistemas operativos</p>
+        </header>
+
+        <main class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+            <div class="bg-white rounded-xl shadow-lg p-4 flex flex-col">
+                <div class="px-2 pb-4">
+                        <h2 class="text-2xl font-bold text-blue-900">Infografía</h2>
+                        <p class="text-gray-600 mt-1">Subtitulo</p>
+                    </div>
+                <div class="card-container group transform hover:-translate-y-2 transition-transform duration-300">
+                    <a href="infografia/index.html" class="block bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden relative">
+                        <div class="card-overlay">                        
+                            <img src="https://placehold.co/600x400/3B82F6/FFFFFF?text=Infograf%C3%ADa+SO" 
+                                alt="Vista previa de una infografía sobre Sistemas Operativos" 
+                                class="w-full h-auto object-cover">
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg p-4 flex flex-col">
+                <div class="flex-grow flex flex-col">
+                    <div class="px-2 pb-4">
+                        <h2 class="text-2xl font-bold text-blue-900">Video Explicativo</h2>
+                        <p class="text-gray-600 mt-1">Subtitulo</p>
+                    </div>
+                    <div class="card-container group transform hover:-translate-y-2 transition-transform duration-300 w-full aspect-w-16 aspect-h-9 bg-black rounded-lg overflow-hidden flex-grow" style="cursor: pointer;">
+                        <video class="w-full h-full object-cover" controls poster="https://placehold.co/600x338/1E3A8A/FFFFFF?text=Video+SO">
+                            <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+    </div>
+
+</body>
+</html>
