@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía: Guía de Sistemas de Archivos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="page-header">
+        <h1 class="page-header-title">Guía Esencial de Sistemas de Archivos</h1>
+        <p class="page-header-subtitle">¡Bienvenido al equipo de soporte! Domina el pilar de todo sistema operativo.</p>
+    </header>
+
+    <main class="main-content">
+
+        <section id="concepts" class="section-container">
+            <h2 class="section-title">1. ¿Qué es un Sistema de Archivos?</h2>
+            <p class="section-description">Es el método y la estructura que usa un sistema operativo para organizar, almacenar y recuperar datos en un disco. Es la biblioteca digital que evita el caos y permite encontrar la información de forma eficiente.</p>
+            <div class="card-grid">
+                <div class="info-card">
+                    <h3 class="info-card-title">Archivo 📄</h3>
+                    <p class="info-card-text">La unidad básica de datos: un documento, una imagen, un programa, etc.</p>
+                </div>
+                <div class="info-card">
+                    <h3 class="info-card-title">Directorio 📁</h3>
+                    <p class="info-card-text">Un contenedor para organizar archivos y otros directorios de forma jerárquica.</p>
+                </div>
+                <div class="info-card">
+                    <h3 class="info-card-title">Ruta (Path) 🛣️</h3>
+                    <p class="info-card-text">La ubicación única de un archivo o directorio. Ej: `/home/user/file.txt`</p>
+                </div>
+                <div class="info-card">
+                    <h3 class="info-card-title">Partición 💾</h3>
+                    <p class="info-card-text">Una división lógica de un disco. Cada partición puede tener su propio sistema de archivos.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="components" class="section-container">
+            <h2 class="section-title mb-8">2. Componentes Principales</h2>
+             <div class="component-grid">
+                <div class="component-card">
+                    <div class="component-icon">🧱</div>
+                    <h3 class="component-card-title">Bloque / Clúster</h3>
+                    <p class="component-card-text">La unidad de almacenamiento más pequeña que el sistema puede gestionar. Los archivos se dividen en estos bloques.</p>
+                </div>
+                <div class="component-card">
+                    <div class="component-icon">ℹ️</div>
+                    <h3 class="component-card-title">Inodo (Inode)</h3>
+                    <p class="component-card-text">En Linux/Unix, es la "cédula de identidad" de un archivo. Almacena metadatos (tamaño, permisos), pero no su nombre.</p>
+                </div>
+                <div class="component-card">
+                     <div class="component-icon">📖</div>
+                    <h3 class="component-card-title">Superbloque</h3>
+                    <p class="component-card-text">Contiene información vital sobre todo el sistema de archivos. Si se corrompe, es un problema grave.</p>
+                </div>
+                <div class="component-card">
+                    <div class="component-icon">🗂️</div>
+                    <h3 class="component-card-title">Tabla de Asignación (FAT)</h3>
+                    <p class="component-card-text">Un índice (usado en sistemas como FAT32) que rastrea qué bloques pertenecen a cada archivo.</p>
+                </div>
+                 <div class="component-card sm:col-span-2 lg:col-span-1">
+                    <div class="component-icon">🌳</div>
+                    <h3 class="component-card-title">Directorio Raíz</h3>
+                    <p class="component-card-text">El punto de partida de la estructura de árbol de directorios. En Linux es `/`, en Windows `C:\`.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="operations" class="section-container">
+            <h2 class="section-title mb-8">3. Operaciones Básicas</h2>
+            <div class="operations-grid">
+                <div class="operation-item">
+                    <div class="operation-icon-circle">✨</div>
+                    <h4 class="operation-title">Crear</h4>
+                    <p class="operation-command">touch, mkdir</p>
+                </div>
+                <div class="operation-item">
+                    <div class="operation-icon-circle">📖</div>
+                    <h4 class="operation-title">Leer</h4>
+                    <p class="operation-command">cat</p>
+                </div>
+                <div class="operation-item">
+                    <div class="operation-icon-circle">✍️</div>
+                    <h4 class="operation-title">Escribir</h4>
+                    <p class="operation-command">editores de texto</p>
+                </div>
+                <div class="operation-item">
+                    <div class="operation-icon-circle">🗑️</div>
+                    <h4 class="operation-title">Borrar</h4>
+                    <p class="operation-command">rm, rmdir</p>
+                </div>
+                <div class="operation-item">
+                    <div class="operation-icon-circle">📋</div>
+                    <h4 class="operation-title">Copiar</h4>
+                    <p class="operation-command">cp</p>
+                </div>
+                <div class="operation-item">
+                    <div class="operation-icon-circle">🔄</div>
+                    <h4 class="operation-title">Mover/Renombrar</h4>
+                    <p class="operation-command">mv</p>
+                </div>
+                 <div class="operation-item col-span-2 md:col-span-1">
+                    <div class="operation-icon-circle">🔒</div>
+                    <h4 class="operation-title">Permisos</h4>
+                    <p class="operation-command">chmod, chown</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="types" class="section-container">
+            <h2 class="section-title">4. Tipos Más Comunes</h2>
+            <p class="section-description">No todos los sistemas de archivos son iguales. Cada uno tiene sus fortalezas, debilidades y sistemas operativos preferidos. Aquí comparamos los más relevantes.</p>
+            <div class="chart-section-card">
+                <div class="chart-container">
+                    <canvas id="fileSystemRadarChart"></canvas>
+                </div>
+                <p class="chart-caption">Comparación multidimensional de características clave. Escala de 1 (Bajo) a 5 (Alto).</p>
+            </div>
+        </section>
+        
+        <section id="structure" class="section-container">
+             <h2 class="section-title mb-12">5. Estructura de Organización Interna</h2>
+             <p class="section-description">¿Cómo se organiza todo por dentro? La mayoría sigue un modelo jerárquico y usa técnicas inteligentes para proteger y encontrar tus datos rápidamente.</p>
+             <div class="structure-card">
+                <div class="structure-layout">
+                    <div class="structure-column">
+                        <h3 class="structure-column-title">Organización Jerárquica (Árbol)</h3>
+                        <div class="hierarchy-diagram-bg">
+                             <div class="hierarchy-node-container">
+                                <div class="hierarchy-node hierarchy-node-root hierarchy-root-line-down">/ (Raíz)</div>
+                                <div class="hierarchy-level-group">
+                                    <div class="hierarchy-line-side"></div>
+                                    <div class="hierarchy-node-container">
+                                        <div class="hierarchy-node hierarchy-node-level2 hierarchy-line-up hierarchy-line-down">/home</div>
+                                        <div class="hierarchy-node hierarchy-node-level3 hierarchy-line-up">/user</div>
+                                    </div>
+                                    <div class="hierarchy-node-container">
+                                        <div class="hierarchy-node hierarchy-node-level2 hierarchy-line-up hierarchy-line-down">/var</div>
+                                         <div class="hierarchy-node hierarchy-node-level3 hierarchy-line-up">/log</div>
+                                    </div>
+                                     <div class="hierarchy-node-container">
+                                        <div class="hierarchy-node hierarchy-node-level2 hierarchy-line-up hierarchy-line-down">/etc</div>
+                                         <div class="hierarchy-node hierarchy-node-level3 hierarchy-line-up">/fstab</div>
+                                    </div>
+                                </div>
+                             </div>
+                        </div>
+                        <p class="hierarchy-caption">Todo cuelga de un directorio raíz, creando una estructura de árbol ordenada y predecible.</p>
+                    </div>
+                    <div class="structure-column">
+                         <h3 class="structure-column-title">Técnicas Clave</h3>
+                         <div class="key-techniques-list">
+                             <div class="key-technique-card">
+                                 <h4 class="key-technique-title">Indexación (Inodos/MFT)</h4>
+                                 <p class="key-technique-description">En lugar de buscar en todo el disco, el sistema usa un índice (como el índice de un libro) para encontrar la ubicación exacta de los datos de un archivo al instante.</p>
+                             </div>
+                             <div class="key-technique-card">
+                                 <h4 class="key-technique-title">Journaling (Registro por Diario)</h4>
+                                 <p class="key-technique-description">Antes de escribir datos, el sistema "anuncia" lo que va a hacer en un diario. Si hay un apagón, revisa el diario para corregir errores y evitar la corrupción de datos.</p>
+                             </div>
+                         </div>
+                    </div>
+                </div>
+             </div>
+        </section>
+
+    </main>
+
+    <footer class="page-footer">
+        <p>Infografía creada para el equipo de Soporte. ¡Tu conocimiento es nuestra fuerza!</p>
+    </footer>
+
+   <script src="sp.js"></script>
+</body>
+</html>
